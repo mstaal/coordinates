@@ -119,6 +119,13 @@ div#lockdiv {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     text-shadow: 1px 1px #666;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-highlight: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     }
 
 .button:hover {
