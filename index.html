@@ -16,10 +16,10 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-<p id="demo"></p>
+<p onClick="this.setSelectionRange(0, this.value.length)" id="location"></p>
 
 <script>
-var x = document.getElementById("demo");
+var x = document.getElementById("location");
 
 function getLocation() {
     if (navigator.geolocation) {
