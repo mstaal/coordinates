@@ -165,7 +165,7 @@ div#lockdiv {
 
 .button.small:active { padding: 4px 7px 2px; background-position: 0 top; }
 
-.button.large { font-size: 150%; padding: 7px 12px; width: 150px; height: 60px}
+.button.large { font-size: 150%; padding: 7px 12px; width: 135px; height: 60px}
 
 .button.large:hover { background-position: 0 -35px; }
 
