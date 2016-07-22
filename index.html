@@ -18,7 +18,7 @@
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
 <input id="location" value="">
-
+<br>
 <button class="btn" data-clipboard-target="#location">
     <img src="assets/clippy.svg" alt="Copy to clipboard">
 </button>
@@ -29,12 +29,13 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+        x.setAttribute('value', "Geolocation is not supported by this browser.");
+        // x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 function showPosition(position) {
-    x.innerHTML = "(" + position.coords.latitude + "," +
-    position.coords.longitude + ")";
+    //x.innerHTML = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
+    x.setAttribute('value', "(" + position.coords.latitude + "," + position.coords.longitude + ")");
 }
 function showError(error) {
     switch(error.code) {
