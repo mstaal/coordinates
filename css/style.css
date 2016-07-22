@@ -25,10 +25,12 @@ body {
 h1 {
     font-size:200%;
     text-align: center;
+    color:white;
     font-family: Ubuntu,"Arial", Helvetica, sans-serif;
 }
 
 p {
+    color:white;
     font: 18px Ubuntu, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
 }
 
