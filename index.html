@@ -16,7 +16,22 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-<p id="location"></p>
+<input id="location" type=text value="">
+<button type="button" class="button small green" data-clipboard-action="copy" data-clipboard-target="#location">Copy</button>
+
+<script src="../clipboard.js/dist/clipboard.min.js"></script>
+
+<script>
+var clipboard = new Clipboard('.button small green');
+
+clipboard.on('success', function(e) {
+    console.log(e);
+});
+
+clipboard.on('error', function(e) {
+    console.log(e);
+});
+</script>
 
 <script>
 var x = document.getElementById("location");
