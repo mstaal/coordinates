@@ -16,11 +16,12 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-/*<p id="location"></p>*/
-<a id="location" href="sms:&body=this.location;">New SMS Message</a>
+<p id="location"></p>
+<a id="link" href="sms:&body=">New SMS Message</a>
 
 <script>
 var x = document.getElementById("location");
+var y = document.getElementById("link");
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -31,6 +32,7 @@ function getLocation() {
 function showPosition(position) {
     x.innerHTML = "(" + position.coords.latitude + "," +
     position.coords.longitude + ")";
+    y.setAttribute('href', "(" + position.coords.latitude + "," + position.coords.longitude + ")");
 }
 function showError(error) {
     switch(error.code) {
