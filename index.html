@@ -3,6 +3,7 @@
 <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+        <script src="coordinates.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
         <title>Coordinates</title>
         <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
@@ -17,14 +18,14 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-<input type=text id="location" value="" size=37>
+<input type=text id="location" value="" size=37 onclick="selectAll()">
 <br>
 
 <script>
-$(document).ready(function() {
-  $("input[type=text]").focus().select();
-});
 var x = document.getElementById("location");
+function selectAll() {
+    document.getElementById("location").select();
+}
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
