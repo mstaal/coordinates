@@ -17,9 +17,13 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-<input id="location" value="" size=37 onfocus="this.select();" onmouseup="return false;">
+// <input id="location" value="" size=37 onfocus="this.select();" onmouseup="return false;">
 <br>
-
+<ul class="input-list style-1 clearfix">
+<li>
+    <input id="location" value="" size=37 type="text" placeholder=":input">
+</li>
+</ul>
 
 <script>
 var x = document.getElementById("location");
