@@ -23,6 +23,7 @@
 
 <script>
 $(document).ready(function() {
+    $('input:text').mouseup(function(e) { return false; });
     $("input:text").focus(function() { $(this).select(); } );
 });
 var x = document.getElementById("location");
