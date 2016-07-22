@@ -16,26 +16,10 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-<input id="location" type=text value="">
-<button type="button" class="button small green" data-clipboard-action="copy" data-clipboard-target="#location">Copy</button>
-
-<script src="../clipboard.js/dist/clipboard.min.js"></script>
-
-<script>
-var clipboard = new Clipboard('.button small green');
-
-clipboard.on('success', function(e) {
-    console.log(e);
-});
-
-clipboard.on('error', function(e) {
-    console.log(e);
-});
-</script>
+<p id="location"></p>
 
 <script>
 var x = document.getElementById("location");
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -43,12 +27,10 @@ function getLocation() {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
-
 function showPosition(position) {
     x.innerHTML = "(" + position.coords.latitude + "," +
     position.coords.longitude + ")";
 }
-
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
@@ -69,4 +51,3 @@ function showError(error) {
 
 </body>
 </html>
-
