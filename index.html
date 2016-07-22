@@ -17,14 +17,12 @@
 
 <button type="button" class="button large orange" onclick="getLocation()">Get coordinates</button>
 <br><br>
-<input id="location" value="" size=37>
+<input type=text id="location" value="" size=37>
 <br>
 
 <script>
 $(document).ready(function() {
-    $("input:text")
-        .focus(function () { $(this).select(); } )
-        .mouseup(function (e) {e.preventDefault(); });
+  $("input[type=text]").focus().select();
 });
 var x = document.getElementById("location");
 function getLocation() {
