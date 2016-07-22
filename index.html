@@ -22,6 +22,9 @@
 
 
 <script>
+$(document).ready(function() {
+    $("input:text").focus(function() { $(this).select(); } );
+});
 var x = document.getElementById("location");
 function getLocation() {
     if (navigator.geolocation) {
