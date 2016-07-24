@@ -45,9 +45,9 @@ p {
 }
 
 input[type=text] {
-  width: 90%;
+  width: 87%;
   max-width: 400px;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   padding: 12px 20px;
   margin: 8px 0;
@@ -85,14 +85,14 @@ input[type=text] {
    }
 
 a:visited {
-  color:#2c6da0;
+  color:#ff9c00;
 }
 
 a:link {
-  color:#2c6da0;
+  color:#ff9c00;
 }
 a:hover {
-  color:#2c6da0;
+  color:#ff9c00;
 }
 
 table {
