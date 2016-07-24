@@ -1,5 +1,18 @@
 var loc = document.getElementById("location");
 
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        loc.value = "Geolocation is not supported by this browser.";
+        // x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    //x.innerHTML = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
+    document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
+}
+
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
