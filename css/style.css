@@ -61,26 +61,13 @@ div.center {
   position:relative;
 }
 
-div#around {
-  min-height:30px;
-  height:auto !important;
-  height:30px;
-  border-radius: 5px;
-  }
-
-  div#upper {
-  font-size:25%;
-  }
+div#googleMap {
+  align: center;
+  width:500px;
+  height:380px;
+}
 
 
-div#lockdiv {
-  top:50%;
-  }
-
-
-   #footer, #push {
-   height: 40px;
-   }
 
 .styled-select select {
    background: transparent;
