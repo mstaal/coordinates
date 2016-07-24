@@ -33,7 +33,7 @@ div#googleMap {
 
 
 h1 {
-    font-size:200%;
+    font-size:170%;
     text-align: center;
     color:white;
     font-family: Ubuntu,"Arial", Helvetica, sans-serif;
@@ -46,7 +46,8 @@ p {
 
 input[type=text] {
   width: 90%;
-  font-size: 16px;
+  max-width: 400px;
+  font-size: 14px;
   text-align: center;
   padding: 12px 20px;
   margin: 8px 0;
