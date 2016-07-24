@@ -13,7 +13,7 @@ function getLocation() {
 function showPosition(position) {
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  document.getElementById("location").value = "(" + lati + "," + long + ")";
+  loc.value = "(" + lati + "," + long + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
@@ -61,7 +61,11 @@ function initializeMap() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      marker.setPosition(map.getCenter());
+      var mapCenter = map.getCenter();
+      marker.setPosition(mapCenter);
+      var lati = mapCenter.lat();
+      var long = mapCenter.lng();
+      loc.value = "(" + lati + "," + long + ")";
     }, 1);
   });
 }
