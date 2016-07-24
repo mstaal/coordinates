@@ -60,4 +60,4 @@ function initializeMap() {
     }, 1);
   });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initializeMap);
