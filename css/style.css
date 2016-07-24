@@ -62,7 +62,7 @@ div.center {
 }
 
 div#googleMap {
-  argin: auto;
+  margin: auto;
   width:500px;
   height:380px;
 }
