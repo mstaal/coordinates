@@ -46,7 +46,7 @@ p {
 
 input[type=text] {
   width: 85%;
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
   padding: 12px 20px;
   margin: 8px 0;
@@ -150,7 +150,7 @@ table.center {
 
 .button.small:active { padding: 4px 7px 2px; background-position: 0 top; }
 
-.button.large { font-size: 150%; padding: 7px 12px; width: 180px; height: 70px}
+.button.large { font-size: 150%; padding: 7px 12px; width: 135px; height: 60px}
 
 .button.large:hover { background-position: 0 -35px; }
 
