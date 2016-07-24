@@ -11,9 +11,10 @@ function getLocation() {
     }
 }
 function showPosition(position) {
+  var loc = document.getElementById("location");
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.latitude + ")";
+  loc.value = "(" + position.coords.latitude + "," + position.coords.latitude + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
