@@ -64,9 +64,9 @@ function initializeMap() {
     window.setTimeout(function() {
       var loc = document.getElementById("location");
       var mapCenter = map.getCenter();
-      marker.setPosition(map.getCenter());
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
+      marker.setPosition(mapCenter);
       loc.value = "(" + lati + "," + long + ")";
     }, 1);
   });
