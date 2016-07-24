@@ -15,6 +15,22 @@ html,body {
     /* user-select: none; */
 }
 
+div.center {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+
+div#googleMap {
+  margin: auto;
+  /*width:500px;*/
+  /*height:380px;*/
+  width:90%;
+  height:50%;
+  text-align: center;
+}
+
 
 h1 {
     font-size:200%;
@@ -49,21 +65,7 @@ table.center {
     margin-right:auto;
   }
 
-div.center {
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
-  }
 
-
-div#googleMap {
-  margin: auto;
-  /*width:500px;*/
-  /*height:380px;*/
-  width:90%;
-  height:50%;
-  text-align: center;
-}
 
 
 
