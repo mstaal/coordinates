@@ -1,4 +1,5 @@
 var loc = document.getElementById("location");
+var pos;
 var map;
 var marker;
 
@@ -8,13 +9,11 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
         loc.value = "Geolocation is not supported by this browser.";
-        // x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 function showPosition(position) {
-    //x.innerHTML = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
-    document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
-    map.panTo(position);
+  pos = position;
+  document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
 }
 
 function showError(error) {
@@ -66,3 +65,6 @@ function initializeMap() {
 }
 
 google.maps.event.addDomListener(window, 'load', initializeMap);
+document.getElementById("getPos").addEventListener("click", function(){
+  map.panTo(pos);
+});
