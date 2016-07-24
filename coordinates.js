@@ -1,6 +1,7 @@
 var loc = document.getElementById("location");
 var map;
 var marker;
+var link = document.getElementById("sms-link");
 
 // Geolocation
 function getLocation() {
@@ -12,9 +13,11 @@ function getLocation() {
 }
 function showPosition(position) {
   var loc = document.getElementById("location");
+  var link = document.getElementById("sms-link");
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
   loc.value = "(" + lati + "," + long + ")";
+  link.href = "sms:&body" + "(" + lati + "," + long + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
@@ -63,11 +66,13 @@ function initializeMap() {
   // marker.
     window.setTimeout(function() {
       var loc = document.getElementById("location");
+      var link = document.getElementById("sms-link");
       var mapCenter = map.getCenter();
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
       marker.setPosition(mapCenter);
       loc.value = "(" + lati + "," + long + ")";
+      link.href = "sms:&body" + "(" + lati + "," + long + ")";
     }, 1);
   });
 }
