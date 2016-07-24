@@ -62,11 +62,12 @@ function initializeMap() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      //var mapCenter = map.getCenter();
+      var loc = document.getElementById("location");
+      var mapCenter = map.getCenter();
       marker.setPosition(map.getCenter());
-      //var lati = mapCenter.lat();
-      //var long = mapCenter.lng();
-      //loc.value = "(" + lati + "," + long + ")";
+      var lati = mapCenter.lat();
+      var long = mapCenter.lng();
+      loc.value = "(" + lati + "," + long + ")";
     }, 1);
   });
 }
