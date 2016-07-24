@@ -1,4 +1,6 @@
 var loc = document.getElementById("location");
+var map;
+var marker;
 
 // Geolocation
 function getLocation() {
@@ -48,9 +50,9 @@ function initializeMap() {
     rotateControl:false,
     mapTypeId: google.maps.MapTypeId.HYBRID
   };
-  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
   map.setTilt(0);
-  var marker = new google.maps.Marker({
+  marker = new google.maps.Marker({
     position:myPos
   });
   marker.setMap(map);
