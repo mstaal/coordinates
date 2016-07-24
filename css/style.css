@@ -57,8 +57,10 @@ div.center {
 
 div#googleMap {
   margin: auto;
+  /*width:500px;*/
+  /*height:380px;*/
   width:90%;
-  height:90%;
+  height:180px;
   text-align: center;
 }
 
