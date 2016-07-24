@@ -1,5 +1,4 @@
 var loc = document.getElementById("location");
-var pos;
 var map;
 var marker;
 
@@ -12,8 +11,11 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-  pos = position;
-  document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
+  var lati = position.coords.latitude;
+  var long = position.coords.longitude;
+  document.getElementById("location").value = "(" + lati + "," + long + ")";
+  var latLng = new google.maps.LatLng(lati, long);
+  map.panTo(latLng);
 }
 
 function showError(error) {
@@ -65,6 +67,3 @@ function initializeMap() {
 }
 
 google.maps.event.addDomListener(window, 'load', initializeMap);
-document.getElementById("getPos").addEventListener("click", function(){
-  map.panTo(pos);
-});
