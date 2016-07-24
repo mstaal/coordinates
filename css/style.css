@@ -27,7 +27,7 @@ div#googleMap {
   /*width:500px;*/
   /*height:380px;*/
   width:90%;
-  height:50%;
+  height:70%;
   text-align: center;
 }
 
@@ -64,9 +64,6 @@ table.center {
     margin-left:auto;
     margin-right:auto;
   }
-
-
-
 
 
 .styled-select select {
@@ -142,7 +139,7 @@ table.center {
 
 .button.small:active { padding: 4px 7px 2px; background-position: 0 top; }
 
-.button.large { font-size: 150%; padding: 7px 12px; width: 160px; height: 70px}
+.button.large { font-size: 150%; padding: 7px 12px; width: 180px; height: 70px}
 
 .button.large:hover { background-position: 0 -35px; }
 
