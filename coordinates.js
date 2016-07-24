@@ -1,3 +1,5 @@
+var loc = document.getElementById("location");
+
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
