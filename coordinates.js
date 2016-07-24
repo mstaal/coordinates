@@ -12,6 +12,7 @@ function getLocation() {
 function showPosition(position) {
     //x.innerHTML = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
     document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.longitude + ")";
+    map.panTo(position);
 }
 
 function showError(error) {
@@ -33,6 +34,7 @@ function showError(error) {
 
 // Google Maps
 var myPos = new google.maps.LatLng(41.890205,12.492245)
+
 function initializeMap() {
   var mapProp = {
     center: myPos,
@@ -60,4 +62,5 @@ function initializeMap() {
     }, 1);
   });
 }
+
 google.maps.event.addDomListener(window, 'load', initializeMap);
