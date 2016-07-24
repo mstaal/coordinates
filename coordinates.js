@@ -13,7 +13,7 @@ function getLocation() {
 function showPosition(position) {
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  loc.value = "(" + lati + "," + long + ")";
+  document.getElementById("location").value = "(" + position.coords.latitude + "," + position.coords.latitude + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
