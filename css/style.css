@@ -44,6 +44,35 @@ p {
     font: 18px Ubuntu, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
 }
 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+}
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+
+.styled-select {
+   width: 80px;
+   height: 44px;
+   overflow: hidden;
+   background: url(/icons/new_arrow.jpg) no-repeat right #ddd;
+   border: 1px solid #ccc;
+   }
 
 a:visited {
   color:#2c6da0;
@@ -65,26 +94,6 @@ table.center {
     margin-right:auto;
   }
 
-
-.styled-select select {
-   background: transparent;
-   width: 268px;
-   padding: 5px;
-   font-size: 16px;
-   line-height: 1;
-   border: 0;
-   border-radius: 0;
-   height: 34px;
-   -webkit-appearance: none;
-   }
-
-.styled-select {
-   width: 80px;
-   height: 44px;
-   overflow: hidden;
-   background: url(/icons/new_arrow.jpg) no-repeat right #ddd;
-   border: 1px solid #ccc;
-   }
 
 .button {
     padding: 5px 10px;
