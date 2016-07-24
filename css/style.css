@@ -45,7 +45,9 @@ p {
 }
 
 input[type=text] {
-  width: 100%;
+  width: 85%;
+  font-size: 20px;
+  text-align: center;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
