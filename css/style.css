@@ -56,6 +56,13 @@ input[type=text] {
   background-color: #3CBC8D;
   color: white;
 }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #7E737E;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #7E737E;
+   opacity:  1;
+}
 
 .styled-select select {
    background: transparent;
