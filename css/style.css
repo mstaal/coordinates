@@ -54,17 +54,11 @@ div.center {
     margin-right:auto;
   }
 
-#nummer {
-  text-align: center;
-  margin-left:auto;
-  margin-right:auto;
-  position:relative;
-}
 
 div#googleMap {
   margin: auto;
-  width:500px;
-  height:380px;
+  max-width:500px;
+  max-height:380px;
   text-align: center;
 }
 
