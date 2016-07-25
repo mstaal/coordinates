@@ -85,6 +85,10 @@ input[type=text] {
    border: 1px solid #ccc;
    }
 
+a {
+  font-family: Ubuntu,"Arial", Helvetica, sans-serif;
+  font: 18px Ubuntu, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
 a:visited {
   color:#ff9c00;
 }
