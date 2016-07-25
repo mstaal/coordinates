@@ -90,13 +90,16 @@ a {
   font: 18px Ubuntu, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
 }
 a:visited {
+  text-decoration: none;
   color:#ff9c00;
 }
 
 a:link {
+  text-decoration: none;
   color:#ff9c00;
 }
 a:hover {
+  text-decoration: none;
   color:#ff9c00;
 }
 
