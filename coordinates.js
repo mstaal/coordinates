@@ -45,7 +45,7 @@ var myPos = new google.maps.LatLng(41.890205,12.492245)
 function initializeMap() {
   var mapProp = {
     center: myPos,
-    zoom:20,
+    zoom:18,
     panControl:true,
     zoomControl:true,
     mapTypeControl:false,
