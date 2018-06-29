@@ -16,7 +16,8 @@ function showPosition(position) {
   var link = document.getElementById("sms-link");
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  loc.value = "(" + lati + "," + long + ")";
+  // loc.value = "(" + lati + "," + long + ")"; // Coordinates
+  loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
   link.href = "sms:&body=" + "(" + lati + "," + long + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
