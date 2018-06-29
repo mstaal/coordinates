@@ -71,7 +71,8 @@ function initializeMap() {
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
       marker.setPosition(mapCenter);
-      loc.value = "(" + lati + "," + long + ")";
+      // loc.value = "(" + lati + "," + long + ")"; // Coordinates
+      loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
       link.href = "sms:&body=" + "(" + lati + "," + long + ")";
     }, 1);
   });
