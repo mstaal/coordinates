@@ -74,7 +74,8 @@ function initializeMap() {
       marker.setPosition(mapCenter);
       // loc.value = "(" + lati + "," + long + ")"; // Coordinates
       loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-      link.href = "sms:&body=" + "(" + lati + "," + long + ")";
+      // link.href = "sms:&body=" + "(" + lati + "," + long + ")"; // Coordinates
+      link.href = "sms:&body=" + "google.com/maps/?q=" + lati + "," + long; // Google Maps link
     }, 1);
   });
 }
