@@ -56,6 +56,8 @@ input[type=text] {
   border: none;
   background-color: #3CBC8D;
   color: white;
+  -webkit-user-select: all; /* Covers Blink-land & Firefox (yup) */
+  user-select: all; /* Someday */
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #7E737E;
