@@ -2,12 +2,12 @@ var locactionlink;
 var smslink;
 var map;
 var marker;
-setLocationVariables();
+[locationlink, smslink] = defineLocationVariables();
 
-function setLocationVariables() {
-    window.locationlink = document.getElementById("location");
-    window.smslink = document.getElementById("sms-link");
-    return [window.locationlink,window.smslink]
+function defineLocationVariables() {
+    locationlink = document.getElementById("location");
+    smslink = document.getElementById("sms-link");
+    return [locationlink, smslink]
 }
 
 // Geolocation
@@ -19,11 +19,11 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-  //setLocationVariables();
+  [locationlink, smslink] = defineLocationVariables();
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  window.locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-  window.smslink.href = "sms:&body=" + "(" + lati + "," + long + ")";
+  locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
+  smslink.href = "sms:&body=" + "(" + lati + "," + long + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
@@ -71,7 +71,7 @@ function initializeMap() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      //setLocationVariables();
+      [locationlink, smslink] = defineLocationVariables();
       var mapCenter = map.getCenter();
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
