@@ -45,7 +45,7 @@ p {
     font: 18px Ubuntu, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
 }
 
-pre {
+.selectText {
   font-family: 'Space Mono', monospace;
   user-select: all;
   margin: 8px 0;
