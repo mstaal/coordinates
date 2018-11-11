@@ -12,7 +12,7 @@ function defineLocationVariables() {
 
 function setLocationVariables(latitude, longitude) {
     var locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
-    var smslinkHref = "sms:&body=" + "(" + latitude + "," + longitude + ")";
+    var smslinkHref = "sms:&body=" + locactionlinkValue;
     return [locactionlinkValue,smslinkHref]
 }
 
