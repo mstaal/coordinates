@@ -1,7 +1,7 @@
 var loc = document.getElementById("location");
+var link = document.getElementById("sms-link");
 var map;
 var marker;
-var link = document.getElementById("sms-link");
 
 // Geolocation
 function getLocation() {
@@ -12,11 +12,10 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-  var loc = document.getElementById("location");
-  var link = document.getElementById("sms-link");
+  // var loc = document.getElementById("location");
+  //var link = document.getElementById("sms-link");
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  // loc.value = "(" + lati + "," + long + ")"; // Coordinates
   loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
   link.href = "sms:&body=" + "(" + lati + "," + long + ")";
   var latLng = new google.maps.LatLng(lati, long);
@@ -66,15 +65,13 @@ function initializeMap() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      var loc = document.getElementById("location");
-      var link = document.getElementById("sms-link");
+      //var loc = document.getElementById("location");
+      //var link = document.getElementById("sms-link");
       var mapCenter = map.getCenter();
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
       marker.setPosition(mapCenter);
-      // loc.value = "(" + lati + "," + long + ")"; // Coordinates
       loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-      // link.href = "sms:&body=" + "(" + lati + "," + long + ")"; // Coordinates
       link.href = "sms:&body=" + "google.com/maps/?q=" + lati + "," + long; // Google Maps link
     }, 1);
   });
