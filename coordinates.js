@@ -5,8 +5,7 @@ var marker;
 [locationlink, smslink] = defineLocationVariables();
 // Google Maps
 getLocation();
-var myPos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-// var myPos = new google.maps.LatLng(41.890205,12.492245)
+var myPos = new google.maps.LatLng(41.890205,12.492245)
 google.maps.event.addDomListener(window, 'load', initializeMap);
 
 function defineLocationVariables() {
