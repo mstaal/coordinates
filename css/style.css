@@ -47,6 +47,9 @@ p {
 
 .selectText {
   font-family: 'Space Mono', monospace;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
   user-select: all;
   margin: 8px 0;
   padding: 12px 5px;
