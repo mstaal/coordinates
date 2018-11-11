@@ -10,6 +10,12 @@ function defineLocationVariables() {
     return [locationlink, smslink]
 }
 
+function setLocationVariables(latitude, longitude) {
+    locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
+    smslinkHref = "sms:&body=" + "(" + latitude + "," + longitude + ")";
+    return [locactionlinkValue,smslinkHref]
+}
+
 // Geolocation
 function getLocation() {
     if (navigator.geolocation) {
@@ -22,8 +28,7 @@ function showPosition(position) {
   [locationlink, smslink] = defineLocationVariables();
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-  smslink.href = "sms:&body=" + "(" + lati + "," + long + ")";
+  [locationlink.value, smslink.href] = setLocationVariables(lati, long);
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
@@ -76,8 +81,9 @@ function initializeMap() {
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
       marker.setPosition(mapCenter);
-      locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-      smslink.href = "sms:&body=" + "google.com/maps/?q=" + lati + "," + long; // Google Maps link
+      [locationlink.value, smslink.href] = setLocationVariables(lati, long);
+      // locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
+      // smslink.href = "sms:&body=" + "google.com/maps/?q=" + lati + "," + long; // Google Maps link
     }, 1);
   });
 }
