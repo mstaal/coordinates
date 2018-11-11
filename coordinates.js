@@ -14,9 +14,10 @@ function defineLocationVariables() {
 }
 
 function setLocationVariables(latitude, longitude) {
+    [locationlink, smslink] = defineLocationVariables();
     var locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
     var smslinkHref = "sms:&body=" + locactionlinkValue;
-    return [locactionlinkValue, smslinkHref]
+    [locationlink.value, smslink.href] = [locactionlinkValue, smslinkHref]
 }
 
 // Geolocation
@@ -31,7 +32,7 @@ function showPosition(position) {
   [locationlink, smslink] = defineLocationVariables();
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  [locationlink.value, smslink.href] = setLocationVariables(lati, long);
+  setLocationVariables(lati, long);
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
@@ -45,7 +46,7 @@ function centerChangeBehaviour() {
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
       marker.setPosition(mapCenter);
-      [locationlink.value, smslink.href] = setLocationVariables(lati, long);
+      setLocationVariables(lati, long);
     }, 1);
 }
 
@@ -62,7 +63,7 @@ function initializeMap() {
     rotateControl: false,
     mapTypeId: google.maps.MapTypeId.HYBRID
   };
-  map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
   map.setTilt(0);
   marker = new google.maps.Marker({
     position: myPos
