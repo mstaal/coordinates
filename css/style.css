@@ -46,6 +46,7 @@ p {
 }
 
 pre {
+  font-family: 'Space Mono', monospace;
   user-select: all;
   margin: 8px 0;
   padding: 12px 5px;
