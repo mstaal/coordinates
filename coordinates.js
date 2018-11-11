@@ -34,18 +34,19 @@ function showPosition(position) {
 }
 
 function showError(error) {
+    [locationlink, smslink] = defineLocationVariables();
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            window.locactionlink.value = "User denied the request for Geolocation."
+            locactionlink.value = "User denied the request for Geolocation."
             break;
         case error.POSITION_UNAVAILABLE:
-            window.locactionlink.value = "Location information is unavailable."
+            locactionlink.value = "Location information is unavailable."
             break;
         case error.TIMEOUT:
-            window.locactionlink.value = "The request to get user location timed out."
+            locactionlink.value = "The request to get user location timed out."
             break;
         case error.UNKNOWN_ERROR:
-            window.locactionlink.value = "An unknown error occurred."
+            locactionlink.value = "An unknown error occurred."
             break;
     }
 }
