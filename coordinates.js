@@ -1,7 +1,8 @@
-var loc = document.getElementById("location");
-var link = document.getElementById("sms-link");
+var loc;
+var link;
 var map;
 var marker;
+setLocationTexts();
 
 function setLocationTexts() {
     var loc = document.getElementById("location");
