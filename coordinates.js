@@ -31,7 +31,6 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-  [locationlink, smslink] = defineLocationVariables();
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
   setLocationVariables(lati, long);
@@ -43,7 +42,6 @@ function centerChangeBehaviour() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      [locationlink, smslink] = defineLocationVariables();
       var mapCenter = map.getCenter();
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
