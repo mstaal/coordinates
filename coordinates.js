@@ -11,8 +11,8 @@ function defineLocationVariables() {
 }
 
 function setLocationVariables(latitude, longitude) {
-    locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
-    smslinkHref = "sms:&body=" + "(" + latitude + "," + longitude + ")";
+    var locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
+    var smslinkHref = "sms:&body=" + "(" + latitude + "," + longitude + ")";
     return [locactionlinkValue,smslinkHref]
 }
 
