@@ -1,8 +1,9 @@
 var locactionlink;
 var smslink;
+var locationlinkText
 var map;
 var marker;
-[locationlink, smslink] = defineLocationVariables();
+[locationlink, smslink, locationlinkText] = defineLocationVariables();
 // Google Maps
 getLocation();
 var myPos = new google.maps.LatLng(41.890205,12.492245)
@@ -11,15 +12,16 @@ google.maps.event.addDomListener(window, 'load', initializeMap);
 function defineLocationVariables() {
     locationlink = document.getElementById("location");
     smslink = document.getElementById("sms-link");
-    return [locationlink, smslink]
+    locationlinkText = document.getElementById("locationText");
+    return [locationlink, smslink, locationlinkText];
 }
 
 function setLocationVariables(latitude, longitude) {
-    [locationlink, smslink] = defineLocationVariables();
+    [locationlink, smslink, locationlinkText] = defineLocationVariables();
     var locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
     var smsbody = "sms:&body=";
     var smslinkHref = smsbody + locactionlinkValue;
-    [locationlink.value, smslink.href] = [locactionlinkValue, smslinkHref]
+    [locationlink.value, smslink.href, locationlinkText.innerHTML] = [locactionlinkValue, smslinkHref, locactionlinkValue];
 }
 
 // Geolocation
@@ -73,7 +75,7 @@ function initializeMap() {
 }
 
 function showError(error) {
-    [locationlink, smslink] = defineLocationVariables();
+    [locationlink, smslink, locationlinkText] = defineLocationVariables();
     switch(error.code) {
         case error.PERMISSION_DENIED:
             locactionlink.value = "User denied the request for Geolocation."
