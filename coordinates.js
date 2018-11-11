@@ -3,6 +3,11 @@ var link = document.getElementById("sms-link");
 var map;
 var marker;
 
+function setLocationTexts() {
+    var loc = document.getElementById("location");
+    var link = document.getElementById("sms-link");
+}
+
 // Geolocation
 function getLocation() {
     if (navigator.geolocation) {
@@ -12,8 +17,7 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-  // var loc = document.getElementById("location");
-  //var link = document.getElementById("sms-link");
+  setLocationTexts();
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
   loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
@@ -65,8 +69,7 @@ function initializeMap() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      //var loc = document.getElementById("location");
-      //var link = document.getElementById("sms-link");
+      setLocationTexts();
       var mapCenter = map.getCenter();
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
