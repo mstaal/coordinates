@@ -22,6 +22,7 @@ function setLocationVariables(latitude, longitude) {
     var smsbody = "sms:&body=";
     var smslinkHref = smsbody + locactionlinkValue;
     locationlinkText.innerHTML = locactionlinkValue;
+    locationlinkText.href = locactionlinkValue;
     [locationlink.value, smslink.href] = [locactionlinkValue, smslinkHref];
 }
 
