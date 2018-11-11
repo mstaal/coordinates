@@ -48,6 +48,7 @@ p {
 .selectText {
   font-family: 'Space Mono', monospace;
   -webkit-user-select: all;
+  -webkit-touch-callout: default;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
