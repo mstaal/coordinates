@@ -22,8 +22,8 @@ function showPosition(position) {
   //setLocationTexts();
   var lati = position.coords.latitude;
   var long = position.coords.longitude;
-  loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-  link.href = "sms:&body=" + "(" + lati + "," + long + ")";
+  locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
+  smslink.href = "sms:&body=" + "(" + lati + "," + long + ")";
   var latLng = new google.maps.LatLng(lati, long);
   map.panTo(latLng);
 }
@@ -31,16 +31,16 @@ function showPosition(position) {
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            loc.value = "User denied the request for Geolocation."
+            locactionlink.value = "User denied the request for Geolocation."
             break;
         case error.POSITION_UNAVAILABLE:
-            loc.value = "Location information is unavailable."
+            locactionlink.value = "Location information is unavailable."
             break;
         case error.TIMEOUT:
-            loc.value = "The request to get user location timed out."
+            locactionlink.value = "The request to get user location timed out."
             break;
         case error.UNKNOWN_ERROR:
-            loc.value = "An unknown error occurred."
+            locactionlink.value = "An unknown error occurred."
             break;
     }
 }
@@ -76,8 +76,8 @@ function initializeMap() {
       var lati = mapCenter.lat();
       var long = mapCenter.lng();
       marker.setPosition(mapCenter);
-      loc.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
-      link.href = "sms:&body=" + "google.com/maps/?q=" + lati + "," + long; // Google Maps link
+      locactionlink.value = "google.com/maps/?q=" + lati + "," + long; // Google Maps link
+      smslink.href = "sms:&body=" + "google.com/maps/?q=" + lati + "," + long; // Google Maps link
     }, 1);
   });
 }
