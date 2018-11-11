@@ -6,6 +6,7 @@ var marker;
 // Google Maps
 var myPos = new google.maps.LatLng(41.890205,12.492245)
 google.maps.event.addDomListener(window, 'load', initializeMap);
+getLocation();
 
 function defineLocationVariables() {
     locationlink = document.getElementById("location");
