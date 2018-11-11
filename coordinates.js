@@ -21,7 +21,8 @@ function setLocationVariables(latitude, longitude) {
     var locactionlinkValue = "google.com/maps/?q=" + latitude + "," + longitude; // Google Maps link
     var smsbody = "sms:&body=";
     var smslinkHref = smsbody + locactionlinkValue;
-    [locationlink.value, smslink.href, locationlinkText.innerHTML] = [locactionlinkValue, smslinkHref, "HEJ"];
+    locationlinkText.innerHTML = "HEJ";
+    [locationlink.value, smslink.href] = [locactionlinkValue, smslinkHref];
 }
 
 // Geolocation
